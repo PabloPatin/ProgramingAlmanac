@@ -9,8 +9,8 @@ set REPO_URL="https://github.com/PabloPatin/ProgramingAlmanarc.git"
 set BRANCH="main"
 set COMMIT_MESSAGE="Library update"
 
-call :log Переход в директорию вашего проекта
-cd D:\ProgramingAlmanac
+rem call :log Переход в директорию вашего проекта
+rem cd /D "D:\ProgramingAlmanac"
 
 call :log Добавление всех изменений в индекс
 git add . >> %LOG_FILE% 2>&1
@@ -24,5 +24,4 @@ exit
 
 :log
 echo [%DATE% %TIME%] %* >> %LOG_FILE%
-echo hello >> %LOG_FILE%
 endlocal
