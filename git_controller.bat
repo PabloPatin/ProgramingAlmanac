@@ -10,6 +10,8 @@ set REPO_URL="https://github.com/PabloPatin/ProgramingAlmanarc.git"
 set BRANCH="main"
 set COMMIT_MESSAGE="Library update"
 
+echo [%DATE% %TIME%] - Запуск программы >> %LOG_FILE%
+
 call :log Переход в директорию вашего проекта
 cd /D "D:\ProgramingAlmanac"
 for %%A in (.) do set "CURRENT_DIR=%%~fA"
