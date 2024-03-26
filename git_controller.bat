@@ -1,5 +1,6 @@
 @echo off
 
+for %%A in (.) do set "CURRENT_DIR=%%~fA"
 set LOG_FILE="D:\ProgramingAlmanac\log.txt"
 
 echo. > %LOG_FILE%
@@ -11,6 +12,7 @@ set COMMIT_MESSAGE="Library update"
 
 call :log Переход в директорию вашего проекта
 cd /D "D:\ProgramingAlmanac"
+for %%A in (.) do set "CURRENT_DIR=%%~fA"
 
 call :log Добавление всех изменений в индекс
 git add . >> %LOG_FILE% 2>&1
@@ -23,5 +25,5 @@ git push origin %BRANCH% >> %LOG_FILE% 2>&1
 exit
 
 :log
-echo [%DATE% %TIME%] [%CURRENT_DIR%]%* >> %LOG_FILE%
+echo [%DATE% %TIME%] %CURRENT_DIR% %* >> %LOG_FILE%
 endlocal
