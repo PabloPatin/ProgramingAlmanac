@@ -1,1 +1,2 @@
 crate user pavel;
+delete user dmitriy;
