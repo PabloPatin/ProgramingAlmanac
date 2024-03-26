@@ -1,6 +1,5 @@
 @echo off
 
-for %%A in (.) do set "CURRENT_DIR=%%~fA"
 set LOG_FILE="D:\ProgramingAlmanac\log.txt"
 
 echo. > %LOG_FILE%
@@ -18,7 +17,6 @@ git config user.name "PabloPatin" >> %LOG_FILE% 2>&1
 
 call :log Переход в директорию вашего проекта
 cd /D "D:\ProgramingAlmanac"
-for %%A in (.) do set "CURRENT_DIR=%%~fA"
 
 call :log Добавление всех изменений в индекс
 git add . >> %LOG_FILE% 2>&1
@@ -31,5 +29,5 @@ git push origin %BRANCH% >> %LOG_FILE% 2>&1
 exit
 
 :log
-echo %CURRENT_DIR%^> %* >> %LOG_FILE%
+for %%A in (.) do echo %%~fA^> %* >> %LOG_FILE%
 endlocal
