@@ -12,6 +12,10 @@ set COMMIT_MESSAGE="Library update"
 
 echo [%DATE% %TIME%] - Запуск программы >> %LOG_FILE%
 
+call :log Конфигурация пользователя git
+git config user.email "pashka.lop@mail.ru" >> %LOG_FILE% 2>&1
+git config user.name "PabloPatin" >> %LOG_FILE% 2>&1
+
 call :log Переход в директорию вашего проекта
 cd /D "D:\ProgramingAlmanac"
 for %%A in (.) do set "CURRENT_DIR=%%~fA"
