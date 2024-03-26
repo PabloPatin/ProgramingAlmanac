@@ -25,5 +25,5 @@ git push origin %BRANCH% >> %LOG_FILE% 2>&1
 exit
 
 :log
-echo [%DATE% %TIME%] %CURRENT_DIR% %* >> %LOG_FILE%
+echo [%DATE% %TIME%]-%CURRENT_DIR%\> %* >> %LOG_FILE%
 endlocal
