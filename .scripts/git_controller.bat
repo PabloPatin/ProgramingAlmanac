@@ -1,7 +1,7 @@
 @echo off
 
 set GIT_EXE="C:\Program Files\Git\bin\git.exe"
-set LOG_FILE="D:\ProgramingAlmanac\log.txt"
+set LOG_FILE="D:\ProgramingAlmanac\.logs\log.txt"
 
 echo. > %LOG_FILE%
 
