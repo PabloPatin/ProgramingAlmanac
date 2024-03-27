@@ -1,5 +1,5 @@
  
-[27.03.2024 17:05:21,87] - Запуск программы 
-D:\ProgramingAlmanac\.scripts> Конфигурация пользователя git 
-D:\ProgramingAlmanac\.scripts> Переход в директорию вашего проекта 
+[27.03.2024 17:12:55,70] - Запуск программы 
+D:\ProgramingAlmanac> Конфигурация пользователя git 
+D:\ProgramingAlmanac> Переход в директорию вашего проекта 
 D:\ProgramingAlmanac> Добавление всех изменений в индекс 
