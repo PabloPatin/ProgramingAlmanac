@@ -6,7 +6,6 @@ set LOG_FILE="D:\ProgramingAlmanac\log.txt"
 echo. > %LOG_FILE%
 
 :main
-set GIT_SSH_COMMAND="ssh -i C:\Users\pashk\.ssh\id_ed25519"
 set REPO_URL="git@github.com:PabloPatin/ProgramingAlmanac.git"
 set BRANCH="main"
 set COMMIT_MESSAGE="Library update"
@@ -27,7 +26,7 @@ call :log Создание коммита с указанным сообщени
 %GIT_EXE% commit -m %COMMIT_MESSAGE% >> %LOG_FILE% 2>&1
 
 call :log Отправка изменений на сервер
-%GIT_SSH_COMMAND% %GIT_EXE% push origin %BRANCH% >> %LOG_FILE% 2>&1
+set GIT_SSH_COMMAND="ssh -i C:\Users\pashk\.ssh\id_ed25519" %GIT_EXE% push origin %BRANCH% >> %LOG_FILE% 2>&1
 exit
 
 :log
