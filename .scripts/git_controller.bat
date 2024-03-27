@@ -7,7 +7,7 @@ echo. > %LOG_FILE%
 
 :main
 
-%GIT_EXE% config core.sshCommand "ssh -i C:\Users\pashk\.ssh\id_ed25519" 
+%GIT_EXE% config core.sshCommand "ssh -i C:\Users\Днс\.ssh\id_rsa"
 %GIT_EXE% config --global --add safe.directory D:/ProgramingAlmanac
 
 set REPO_URL="git@github.com:PabloPatin/ProgramingAlmanac.git"
