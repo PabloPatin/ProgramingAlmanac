@@ -21,6 +21,9 @@ call :log Конфигурация пользователя git
 call :log Переход в директорию вашего проекта
 cd /D "D:\ProgramingAlmanac"
 
+call :log Обновление файлов репозитория
+%GIT_EXE% pull >> %LOG_FILE% 2>&1
+
 call :log Добавление всех изменений в индекс
 %GIT_EXE% add -A >> %LOG_FILE% 2>&1
 
