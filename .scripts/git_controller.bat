@@ -22,7 +22,7 @@ call :log Переход в директорию вашего проекта
 cd /D "D:\ProgramingAlmanac"
 
 call :log Добавление всех изменений в индекс
-%GIT_EXE% add -A >> %LOG_FILE% 2>&1
+%GIT_EXE% add . >> %LOG_FILE% 2>&1
 
 call :log Создание коммита с указанным сообщением
 %GIT_EXE% commit -m %COMMIT_MESSAGE% >> %LOG_FILE% 2>&1
