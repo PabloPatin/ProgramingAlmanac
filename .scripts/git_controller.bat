@@ -28,7 +28,7 @@ call :log Создание коммита с указанным сообщени
 %GIT_EXE% commit -m %COMMIT_MESSAGE% >> %LOG_FILE% 2>&1
 
 call :log Обновление файлов репозитория
-%GIT_EXE% pull origin %BRANCH>> %LOG_FILE% 2>&1
+%GIT_EXE% pull origin %BRANCH%>> %LOG_FILE% 2>&1
 
 call :log Отправка изменений на сервер
 %GIT_EXE% push origin %BRANCH% >> %LOG_FILE% 2>&1
