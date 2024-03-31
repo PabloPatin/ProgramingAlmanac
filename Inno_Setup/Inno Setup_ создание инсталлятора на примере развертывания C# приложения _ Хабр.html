@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://habr.com/ru/articles/255807/ -->
+<html lang="ru">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/common-engine.js.загрузка" data-roxot-inited="true"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1,user-scalable=0">
+  <meta name="referrer" content="unsafe-url">
+  <title>Inno Setup: создание инсталлятора на примере развертывания C# приложения / Хабр</title>
+  <style>
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    /* cyrillic */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveQhf6TF0.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveSBf6TF0.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveRhf6.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* non-breaking hyphen */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmEU9vBh0_IsHAlmrO6g&skey=ee881451c540fdec&v=v29) format('woff2');
+      unicode-range: U+02011;
+    }
+  </style>
+  <link rel="preload" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/light.css" as="style"><link id="light-colors" rel="stylesheet" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/light.css" media="all">
+  <link rel="preload" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/chunk-vendors.5e25635d.css" as="style"><link rel="preload" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/chunk-vendors.3a359bdb.js.загрузка" as="script"><link rel="preload" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/app.ff5400b1.css" as="style"><link rel="preload" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/app.42ccfef0.js.загрузка" as="script"><link rel="preload" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/7298.c8f1d73c.js.загрузка" as="script">
+  <link rel="stylesheet" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/chunk-vendors.5e25635d.css"><link rel="stylesheet" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/app.ff5400b1.css">
+  <script async="" src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/tag.js.загрузка"></script><script>window.i18nFetch = new Promise((res, rej) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', '/js/i18n/ru-compiled.c315dc9c3c36609b750822acd6ef6796.json');
+          xhr.responseType = 'json';
+          xhr.onload = function(e) {
+            if (this.status === 200) {
+              res({ru: xhr.response});
+            } else {
+              rej(e);
+            }
+          };
+          xhr.send();
+        });</script>
+  
+  <script data-vue-meta="ssr" type="application/ld+json" data-vmid="ldjson-schema">{"@context":"http:\/\/schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/habr.com\/ru\/articles\/255807\/"},"headline":"Inno Setup: создание инсталлятора на примере развертывания C# приложения","datePublished":"2015-04-16T11:25:35+03:00","dateModified":"2015-04-16T11:25:35+03:00","author":{"@type":"Person","name":"Дмитрий Притыкин"},"publisher":{"@type":"Organization","name":"Habr","logo":{"@type":"ImageObject","url":"https:\/\/habrastorage.org\/webt\/a_\/lk\/9m\/a_lk9mjkccjox-zccjrpfolmkmq.png"}},"description":"Введение  Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для о...","url":"https:\/\/habr.com\/ru\/articles\/255807\/#post-content-body","about":["h_webdev","h_open_source","h_programming","f_develop"],"image":["https:\/\/habrastorage.org\/files\/f3d\/e50\/ca3\/f3de50ca389143a9b3a02988dcc6edc5.PNG","https:\/\/habrastorage.org\/files\/430\/f94\/36b\/430f9436b35442d1b9c06d2d66b91ec4.PNG","https:\/\/habrastorage.org\/files\/080\/473\/d6d\/080473d6d04140c0b2f92adbb376c165.PNG","https:\/\/habrastorage.org\/files\/5ad\/a0c\/ca2\/5ada0cca2363451e812dcef9287db00c.PNG","https:\/\/habrastorage.org\/files\/9c3\/ec4\/e48\/9c3ec4e484a3402eb62af12bad24e410.PNG","https:\/\/habrastorage.org\/files\/598\/704\/c40\/598704c4087140b18f348d83a9383969.PNG","https:\/\/habrastorage.org\/files\/c42\/c92\/a0f\/c42c92a0f7134d17a2c76a1597cbe7ac.PNG","https:\/\/habrastorage.org\/files\/5be\/de0\/b26\/5bede0b261c44944a9a81fa5bde05c58.PNG","https:\/\/habrastorage.org\/files\/fc1\/54e\/0bd\/fc154e0bd2ff43aab48a01be8415c33f.PNG","https:\/\/habrastorage.org\/files\/5b0\/4eb\/cab\/5b04ebcabc604b0589bcfcef8c00a0f4.PNG","https:\/\/habrastorage.org\/files\/040\/b41\/095\/040b410957fd426e932d2674c03f5948.PNG"]}</script>
+  <style>.grecaptcha-badge{visibility: hidden;}</style>
+  <meta name="habr-version" content="2.172.0">
+  
+  <meta data-vue-meta="ssr" property="fb:app_id" content="444736788986613"><meta data-vue-meta="ssr" property="fb:pages" content="472597926099084"><meta data-vue-meta="ssr" name="twitter:card" content="summary_large_image"><meta data-vue-meta="ssr" name="twitter:site" content="@habr_com"><meta data-vue-meta="ssr" property="og:site_name" content="Хабр" data-vmid="og:site_name"><meta data-vue-meta="ssr" property="og:title" content="Inno Setup: создание инсталлятора на примере развертывания C# приложения" data-vmid="og:title"><meta data-vue-meta="ssr" name="twitter:title" content="Inno Setup: создание инсталлятора на примере развертывания C# приложения" data-vmid="twitter:title"><meta data-vue-meta="ssr" name="aiturec:title" content="Inno Setup: создание инсталлятора на примере развертывания C# приложения" data-vmid="aiturec:title"><meta data-vue-meta="ssr" name="description" content="Введение Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для основной, научной, деятельности. Поэтому..." data-vmid="description"><meta data-vue-meta="ssr" itemprop="description" content="Введение Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для основной, научной, деятельности. Поэтому..." data-vmid="description:itemprop"><meta data-vue-meta="ssr" property="og:description" content="Введение Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для основной, научной, деятельности. Поэтому..." data-vmid="og:description"><meta data-vue-meta="ssr" name="twitter:description" content="Введение Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для основной, научной, деятельности. Поэтому..." data-vmid="twitter:description"><meta data-vue-meta="ssr" property="aiturec:description" content="Введение Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для основной, научной, деятельности. Поэтому..." data-vmid="aiturec:description"><meta data-vue-meta="ssr" itemprop="image" content="https://habr.com/share/publication/255807/043e41a8d124a6a38a4717c2052d37ca/" data-vmid="image:itemprop"><meta data-vue-meta="ssr" property="og:image" content="https://habr.com/share/publication/255807/043e41a8d124a6a38a4717c2052d37ca/" data-vmid="og:image"><meta data-vue-meta="ssr" property="og:image:width" content="1200" data-vmid="og:image:width"><meta data-vue-meta="ssr" property="og:image:height" content="630" data-vmid="og:image:height"><meta data-vue-meta="ssr" property="aiturec:image" content="https://habr.com/share/publication/255807/043e41a8d124a6a38a4717c2052d37ca/" data-vmid="aiturec:image"><meta data-vue-meta="ssr" name="twitter:image" content="https://habr.com/share/publication/255807/043e41a8d124a6a38a4717c2052d37ca/" data-vmid="twitter:image"><meta data-vue-meta="ssr" property="vk:image" content="https://habr.com/share/publication/255807/043e41a8d124a6a38a4717c2052d37ca/?format=vk" data-vmid="vk:image"><meta data-vue-meta="ssr" property="aiturec:item_id" content="255807" data-vmid="aiturec:item_id"><meta data-vue-meta="ssr" property="aiturec:datetime" content="2015-04-16T08:25:35.000Z" data-vmid="aiturec:datetime"><meta data-vue-meta="ssr" content="https://habr.com/ru/articles/255807/" property="og:url" data-vmid="og:url"><meta data-vue-meta="ssr" property="og:type" content="article" data-vmid="og:type"><meta data-vue-meta="ssr" property="og:locale" content="ru_RU" data-vmid="og:locale"><meta data-vue-meta="ssr" name="keywords" content="inno setup, open source, создание инсталлятора">
+  <link data-vue-meta="ssr" href="https://habr.com/ru/rss/publications/255807/?fl=ru" type="application/rss+xml" title="" rel="alternate" name="rss"><link data-vue-meta="ssr" href="https://habr.com/ru/articles/255807/" rel="canonical" data-vmid="canonical"><link data-vue-meta="ssr" rel="image_src" href="https://habr.com/share/publication/255807/043e41a8d124a6a38a4717c2052d37ca/" data-vmid="image:href">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303b44">
+  <meta name="msapplication-TileColor" content="#629FBC">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="https://assets.habr.com/habr-web/img/favicons/favicon-16.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="https://assets.habr.com/habr-web/img/favicons/favicon-32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-76.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-120.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-152.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-180.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-256.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_1136x640.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2436x1125.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_1792x828.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_828x1792.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_1334x750.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_1242x2668.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2208x1242.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_1125x2436.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_1242x2208.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2732x2048.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2688x1242.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2224x1668.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_750x1334.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_2048x2732.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2388x1668.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_1668x2224.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_640x1136.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_1668x2388.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="https://assets.habr.com/habr-web/img/splashes/splash_2048x1536.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="https://assets.habr.com/habr-web/img/splashes/splash_1536x2048.png">
+  <link rel="mask-icon" color="#77a2b6" href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-120.svg">
+  <link crossorigin="use-credentials" href="https://habr.com/manifest.webmanifest" rel="manifest">
+  <script async="" src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/pwacompat" crossorigin="anonymous"></script>
+  <script>window.yaContextCb = window.yaContextCb || []</script>
+  <script src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/context.js.загрузка" async=""></script>
+<link rel="stylesheet" type="text/css" href="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/gallery.3e8c05c3.css"><style id="syntax-highlighting-style">.ͼ4 {color: #8959a8; font-weight: bold;}
+.ͼ5 {color: #4271ae;}
+.ͼ6 {color: #4d4d4c;}
+.ͼ7 {color: #718c00;}
+.ͼ8 {color: #8e908c;}
+.ͼ9 {color: #f5871f;}
+.ͼa {color: #bc6060; font-weight: bold;}
+.ͼb {color: #bc6060;}
+.ͼc {color: #c82829;}
+.ͼd {color: #718c00;}
+.ͼe {color: #4d4d4c; border-bottom: 1px dotted #4d4d4c;}
+.ͼf {font-weight: bold; color: #4271ae;}
+.ͼg {font-weight: bold; color: #bc6060;}
+.ͼh {color: #bc6060;}
+.ͼi {color: #4271ae; text-decoration: underline; text-underline-position: under;}
+.ͼj {font-style: italic; color: #bc6060;}
+.ͼk {text-decoration: line-through; color: #bc6060;}
+.ͼl {color: #8e908c;}
+.ͼm {color: #4271ae;}</style><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preconnect" href="https://yastatic.net/"><link rel="preconnect" href="https://avatars.mds.yandex.net/"><link rel="preconnect" href="https://mc.yandex.ru/"><link rel="preconnect" href="https://ads.adfox.ru/"><link rel="preload" href="https://yastatic.net/s3/home/fonts/ys/3/text-variable-full.woff2" type="font/woff2" as="font" crossorigin="anonymous"><style id="ysTextCssRule">@font-face {
+        font-family: "YS Text Variable";
+        src: url("https://yastatic.net/s3/home/fonts/ys/3/text-variable-full.woff2") format("woff2");
+        font-weight: 400 700;
+        font-display: optional;}</style><script async="" crossorigin="anonymous" src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/host.js.загрузка"></script><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="512x512"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="384x384"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="256x256"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="192x192"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="152x152"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="144x144"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="128x128"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="96x96"><link rel="icon" href="https://habr.com/img/maskable_icon.png" sizes="72x72"><meta name="theme-color" content="#303b44"><meta name="x5-page-mode" content="app"><meta name="browsermode" content="application"><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style><style> .qb24f3d85{cursor:pointer !important;position:absolute !important;right:4px !important;top:4px !important;z-index:10 !important;width:24px !important;height:24px !important;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;pointer-events:auto !important;border-radius:50% !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important;-webkit-tap-highlight-color:transparent !important} .qb24f3d85:hover{opacity:.8 !important} .qf624fcc5{background-color:#fff !important;opacity:.8 !important;height:100% !important;width:100% !important;position:absolute !important;top:0 !important;left:0 !important;z-index:-1 !important;border-radius:inherit !important;-webkit-transition:opacity .15s,background-color .5s ease-in-out !important;-o-transition:opacity .15s,background-color .5s ease-in-out !important;transition:opacity .15s,background-color .5s ease-in-out !important} .q406e2041{position:relative !important} .h10312253{left:4px !important} .h10312253, .f30c185d8{position:absolute !important;top:4px !important;z-index:10 !important} .f30c185d8{right:4px !important} .xd334c495{margin:0 auto !important}</style></head>
+<body>
+
+
+  <article class="tm-article-presenter__content tm-article-presenter__content_narrow"><div class="tm-article-presenter__header"> <div class="tm-article-snippet tm-article-presenter__snippet tm-article-snippet"> <div class="tm-article-snippet__meta-container"><div class="tm-article-snippet__meta"><span class="tm-user-info tm-article-snippet__author"><a href="/ru/users/maisvendoo/" title="maisvendoo" class="tm-user-info__userpic"><div class="tm-entity-image"><img alt="" height="32" src="//habrastorage.org/r/w64/getpro/habr/avatars/3ba/2c6/d1f/3ba2c6d1fd94c8e12cbebc23b8ee8b9f.png" width="32" class="tm-entity-image__pic"></div></a> <span class="tm-user-info__user tm-user-info__user_appearance-default"><a href="/ru/users/maisvendoo/" class="tm-user-info__username">
+      maisvendoo
+      <!----></a> <span class="tm-article-datetime-published"><time datetime="2015-04-16T08:25:35.000Z" title="2015-04-16, 11:25">16  апр  2015 в 11:25</time></span></span></span></div> <!----></div> <h1 lang="ru" class="tm-title tm-title_h1"><span>Inno Setup: создание инсталлятора на примере развертывания C# приложения</span></h1> <div class="tm-article-snippet__stats"><!----> <div class="tm-article-reading-time"><span class="tm-svg-icon__wrapper tm-article-reading-time__icon"><svg height="24" width="24" class="tm-svg-img tm-svg-icon"><title>Время на прочтение</title> <use xlink:href="/img/megazord-v28.faec9762..svg#clock"></use></svg></span> <span class="tm-article-reading-time__label">
+    13 мин
+  </span></div> <span class="tm-icon-counter tm-data-icons__item"><svg height="24" width="24" class="tm-svg-img tm-icon-counter__icon"><title>Количество просмотров</title> <use xlink:href="/img/megazord-v28.faec9762..svg#counter-views"></use></svg> <span class="tm-icon-counter__value">195K</span></span></div> <div class="tm-publication-hubs__container"><div class="tm-publication-hubs"><span class="tm-publication-hub__link-container"><a href="/ru/hubs/webdev/" class="tm-publication-hub__link"><span>Веб-разработка</span> <span title="Профильный хаб" class="tm-article-snippet__profiled-hub">*</span></a></span><span class="tm-publication-hub__link-container"><a href="/ru/hubs/open_source/" class="tm-publication-hub__link"><span>Open source</span> <span title="Профильный хаб" class="tm-article-snippet__profiled-hub">*</span></a></span><span class="tm-publication-hub__link-container"><a href="/ru/hubs/programming/" class="tm-publication-hub__link"><span>Программирование</span> <span title="Профильный хаб" class="tm-article-snippet__profiled-hub">*</span></a></span></div></div> <div class="tm-article-labels"><div class="tm-article-labels__container"><div class="tm-publication-label tm-publication-label_variant-tutorial"><span>
+    Туториал
+  </span></div> </div></div> <!----> <!----></div></div> <!----> <div data-gallery-root="" lang="ru" class="tm-article-body"><div></div> <div id="post-content-body"><div><div class="article-formatted-body article-formatted-body article-formatted-body_version-1"><div xmlns="http://www.w3.org/1999/xhtml"><h1>Введение</h1><br>
+<br>
+Я не являюсь профессиональным программистом. В том смысле, что не зарабатываю денег этим ремеслом, а использую свои навыки в качестве инструмента для основной, научной, деятельности. Поэтому все мои «поделки» живут лишь отведенный им на решение конкретной задачи период и не выходят за пределы каталогов проекта. Кроме того, уже довольно давно я отошел от разработки под ОС Windows, ибо Linux для решения моих задач более удобен.<br>
+<br>
+Однако ученым тоже хочется кушать, прилично одеваться и заправлять машину. Поэтому (правда довольно редко) возникает необходимость немного пофрилансить.<br>
+<br>
+Недавно мне подкинули не слишком сложный проект — одна фирма хочет написать аналог программы, имеющейся у другой. Немного реверсинга, немного кодинга, в целом проект вполне обыденный. Однако тут же возник вопрос о создании инсталлятора — клиент ведь желает продукт «под ключ», чтобы клацнуть на «сетап», понажимать «Далее» и получить готовую к работе программу. <br>
+<br>
+Созданием инсталляторов я не занимался никогда. Поэтому данный вопрос был основательно «загуглен», в числе прочего попалась и <a href="http://habrahabr.ru/post/20560/">такая статья</a> с Хабра. Выбор средств для подобной задачи довольно широк, и включает как проприетарные, так и открытые продукты. Вот список того, что я «пощупал»<br>
+<br>
+<ol>
+<li><a href="http://www.installshield.com/">InstallShield</a> — классика жанра, достаточно солидный проприетарный продукт</li>
+<li><a href="http://www.advancedinstaller.com/">Adnvanced Installer</a> — проприетарный инструмент с широкими возможностями кастомизации через GUI. На сайте сказано, что если Вы блоггер и будете писать об этом продукте много хороших слов, то у Вас есть возможность получить Free License</li>
+<li><a href="http://wixtoolset.org/">WiX</a> — открытый бесплатный продукт, основанный на XML-скриптах. Мощная, хорошо документированная штука. Разбираться с ним я пока не стал, ибо время дорого (да и к XML душа лежит не очень). Возможно когда нибудь я к нему вернусь. Да, к нему есть плагины для Visual Studio, что несомненный плюс.</li>
+<li><a href="http://www.jrsoftware.org/isdl.php">Inno Setup</a> — опенсорсный проект, <a href="https://github.com/jrsoftware/issrc">код которого доступен на гитхабе</a>. В силу бесплатности и низкого порога вхождения мой выбор остановился именно на нем, как инструменте позволившем выполнить работу быстро и качественно.</li>
+</ol><br>
+<br>
+Так что в статье мы будем рассматривать пример использования Inno Setup, для которого имеется полезный фронтэнд <a href="https://www.kymoto.org/products/inno-script-studio">Inno Script Studio</a>, позволяющий выполнять создание простых инсталляторов с помощью мастера и менять настройки через GUI. GUI понадобился мне для первого знакомства, с продуктом, но мы не будем уделять ему большого внимания — мой «линукс головного мозга» в последнее время всё больше и больше уводит меня от желания использовать разного рода «мастера» (это субъективно, прошу не пинать). Мы рассмотрим хардкорный способ написания скрипта с чистого листа.<br>
+<br>
+<a name="habracut"></a><br>
+<br>
+<h1>1. Установка, настройка и простой (но довольно солидный) скрипт</h1><br>
+<br>
+Думаю, что скачать программу с официального сайта и установить её труда не составит. Запускаем Inno Setup Compiler и видим такое окно<br>
+<br>
+<i>Пугающе уныло встречает нас Inno Setup...</i><br>
+<img src="https://habrastorage.org/files/f3d/e50/ca3/f3de50ca389143a9b3a02988dcc6edc5.PNG"><br>
+<br>
+Что это? По сути это просто-напросто редактор для набора скриптов, снабженный подсветкой синтаксиса и кнопками компиляции и запуска. От нас ждут, что мы начнем набирать в этом окне текст скрипта, определяющий логику работы будущего инсталлятора. Ну так и не будем терять время.<br>
+<br>
+Прежде всего определим необходимые константы<br>
+<pre><code>;------------------------------------------------------------------------------
+;
+;       Пример установочного скрипта для Inno Setup 5.5.5
+;       (c) maisvendoo, 15.04.2015
+;
+;------------------------------------------------------------------------------
+
+;------------------------------------------------------------------------------
+;   Определяем некоторые константы
+;------------------------------------------------------------------------------
+
+; Имя приложения
+#define   Name       "Miramishi Painter"
+; Версия приложения
+#define   Version    "0.0.1"
+; Фирма-разработчик
+#define   Publisher  "Miramishi"
+; Сафт фирмы разработчика
+#define   URL        "http://www.miramishi.com"
+; Имя исполняемого модуля
+#define   ExeName    "Miramishi.exe"
+</code></pre><br>
+<br>
+Эти строки будут часто встречаться в коде скрипта, поэтому определяем их, как и в C, с помощью дерективы <b>#define</b><br>
+<br>
+Тело скрипта разделяется на секции, каждая из которых несет свое функциональное назначение. Обязательная секция <b>[Setup]</b> задает глобальные параметры работы инсталлятора и деинсталатора. <br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Параметры установки
+;------------------------------------------------------------------------------
+[Setup]
+
+; Уникальный идентификатор приложения, 
+;сгенерированный через Tools -&gt; Generate GUID
+AppId={{F3E2EDB6-78E8-4539-9C8B-A78F059D8647}
+
+; Прочая информация, отображаемая при установке
+AppName={#Name}
+AppVersion={#Version}
+AppPublisher={#Publisher}
+AppPublisherURL={#URL}
+AppSupportURL={#URL}
+AppUpdatesURL={#URL}
+
+; Путь установки по-умолчанию
+DefaultDirName={pf}\{#Name}
+; Имя группы в меню "Пуск"
+DefaultGroupName={#Name}
+
+; Каталог, куда будет записан собранный setup и имя исполняемого файла
+OutputDir=E:\work\test-setup
+OutputBaseFileName=test-setup
+
+; Файл иконки
+SetupIconFile=E:\work\Mirami\Mirami\icon.ico
+
+; Параметры сжатия
+Compression=lzma
+SolidCompression=yes
+</code></pre><br>
+<br>
+Пристальное внимание уделаем опции <b>AddId</b> — уникальный идентификатор приложения (GUID), используемый для регистрации приложения в реестре Windows. Его пишем не «от фонаря», а генерируем, открывая фигурную скобку, и выбрав в меню пункт Tools -&gt; Generate GUID (или используя хот-кей Shift + Ctrl + G). Далее указываем имя приложения, под которым оно будет установлено в системе, его версию, данные фирмы разработчика, адреса сайтов разработчика, технической поддержки и обновления.<br>
+<br>
+Путь, по умолчанию предлагаемый инсталлятором для установки определяем опцией <b>DefaultDirName</b>. При этом переменная <b>{pf}</b> — это путь в каталог Program Files соответствующей разрядности. Опция <b>DefaultGroupName</b> определяет имя группы программы в меню «Пуск». Обратите внимание на то, что для указания имени приложения мы используем данное нами выше макроопределение Name, обрамляя его фигурными скобками и решеткой.<br>
+<br>
+Пара опций <b>OutputDir</b> и <b>OutputBaseFileName</b> задают каталог, куда будет записан скомпилированный «сетап» и его имя (без расширения). Кроме этого, указываем где взять иконку для test-setup.exe опцией <b>SetupIconFile</b>.<br>
+<br>
+Последние опции в этой секции определяют алгоритм сжатия (LZMA) и указывают, что все файлы сжимаются одновременно, а не по отдельности (<b>SolidCompression</b>) что ускоряет процесс распаковки при большом количестве однотипных файлов.<br>
+<br>
+В хорошем исталяторе должна быть поддержка нескольких языков. Включаем её в наш «сетап», используя опциональную секцию <b>[Languages]</b>. При отсутствии данной секции будет использоваться английский язык.<br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Устанавливаем языки для процесса установки
+;------------------------------------------------------------------------------
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"; LicenseFile: "License_ENG.txt"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; LicenseFile: "License_RUS.txt"
+</code></pre><br>
+<br>
+Каждая строка в данной секции задает один из используемых при установке языков. Синтаксис строки таков<br>
+<br>
+<pre><code>&lt;имя параметра&gt;: &lt;значение параметра&gt;
+</code></pre><br>
+<br>
+в качестве разделителя параметров используется точка с запятой. Параметр <b>Name</b> говорит сам за себя — «имя» языка, допускаются общепринятые двухбуквенные сокращения («en», «ru», «de» и так далее). Параметр <b>MessagesFile</b> сообщает компилятору в каком месте взять шаблон сообщений, выводимых при инсталляции. Эти шаблоны берем в каталоге компилятора Inno Setup, о чем мы сообщаем директивой <b>compiler</b>. Для английского языка годится шаблон Default.isl, для русского — Languages\Russian.isl<br>
+<br>
+Параметр LicenseFile задает путь к файлу с текстом лицензии на соответствующем языке.<br>
+<br>
+Обычно установщик предлагает нам, например, определится, хотим мы или не хотим создать ярлык на рабочем столе. Такие опции установки определяются необязательной секцией <b>[Tasks]</b><br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Опционально - некоторые задачи, которые надо выполнить при установке
+;------------------------------------------------------------------------------
+[Tasks]
+; Создание иконки на рабочем столе
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+</code></pre><br>
+<br>
+Здесь <b>Name</b> задает имя операции — «desktopicom» — создание иконки на рабочем столе; <b>Description</b> — описание чекбокса с опцией, которое увидит пользователь. Конструкция<br>
+<br>
+<pre><code>{cm:&lt;имя сообщения&gt;}
+</code></pre><br>
+<br>
+задает стандартный текст сообщения, соответствующий выбранному в начале инсталляции языку. Параметр <b>GroupDescription</b> — заголовок группы чекбоксов с опциями. Параметр Flags задает определенные действия и состояния элементов управления, в данном случае указывая, что галочка «создать ярлык на рабочем столе» должна быть снята.<br>
+<br>
+<div class="spoiler"><b class="spoiler_title">Чтобы было понятно - так выглядит результат</b><div class="spoiler_text"><img src="https://habrastorage.org/files/430/f94/36b/430f9436b35442d1b9c06d2d66b91ec4.PNG"><br>
+</div></div><br>
+<br>
+Теперь укажем, какие файлы надо включить в дистрибутив и где их надо поместить при установке. Для этого используется обязательная секция <b>[Files]</b><br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Файлы, которые надо включить в пакет установщика
+;------------------------------------------------------------------------------
+[Files]
+
+; Исполняемый файл
+Source: "E:\work\Mirami\Mirami\bin\Release\Miramishi.exe"; DestDir: "{app}"; Flags: ignoreversion
+
+; Прилагающиеся ресурсы
+Source: "E:\work\Mirami\Mirami\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+</code></pre><br>
+<br>
+Здесь<br>
+<br>
+<ul>
+<li><b>Source</b> — путь к файлу-источнику. У меня всё необходимое программе для работы лежит в каталоге Release проекта MS VS</li>
+<li><b>DestDir</b> — каталог установки, переменная {app} содержит путь, выбранный пользователем в окне установщика</li>
+<li><b>Flags</b> — разнообразные флаги. В нашем примере для исполняемого файла: игнорирование версии программы при перезаписи исполняемого модуля, если он уже существует в системе (ignorevarsion); для остальных файлов и каталогов так же игнорируем версию, рекурсивно включаем все подкаталоги и файлы источника (recursesubdirs) и создаем подкаталоги, если их нет (createallsubdirs) </li>
+</ul><br>
+<br>
+Наконец, чтобы всё было красиво, опционально укажем компилятору, где брать иконки для размещения в меню программ и на рабочем столе<br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Указываем установщику, где он должен взять иконки
+;------------------------------------------------------------------------------ 
+[Icons]
+
+Name: "{group}\{#Name}"; Filename: "{app}\{#ExeName}"
+
+Name: "{commondesktop}\{#Name}"; Filename: "{app}\{#ExeName}"; Tasks: desktopicon
+</code></pre><br>
+<br>
+Тут я указываю, что для группы в меню «Пуск» и для рабочего стола иконку надо брать из исполняемого модуля. Естественно, что иконка должна быть в него «вкомпилена», иначе в требуемых местах мы увидим стандартный значок из коллекции винды. <br>
+<br>
+Итак, всё вроде готово. Жмем Ctrl + F9 и пытаемся собрать инсталлятор. Если не допущены синтаксические ошибки, начнется процесс сборки<br>
+<br>
+<i>Inno Setup собирает инсталлятор</i><br>
+<img src="https://habrastorage.org/files/080/473/d6d/080473d6d04140c0b2f92adbb376c165.PNG"><br>
+<br>
+После успешной сборки инсталлятор можно запустить, нажав F9. Если Вы работаете под учеткой с ограниченными правами (а я работаю в винде именно так), то придется полезть в каталог с результатами компиляции, который мы указали в скрипте, и запустить инсталлятор с правами админа<br>
+<br>
+<i>Запуск инсталлятора под ограниченной учетной записью</i><br>
+<img src="https://habrastorage.org/files/5ad/a0c/ca2/5ada0cca2363451e812dcef9287db00c.PNG"><br>
+<br>
+В итоге мы увидим до боли знакомое каждому пользователю Windows окно выбора языка<br>
+<img src="https://habrastorage.org/files/9c3/ec4/e48/9c3ec4e484a3402eb62af12bad24e410.PNG"><br>
+приветствие мастера<br>
+<img src="https://habrastorage.org/files/598/704/c40/598704c4087140b18f348d83a9383969.PNG"><br>
+лицензионное соглашение<br>
+<img src="https://habrastorage.org/files/c42/c92/a0f/c42c92a0f7134d17a2c76a1597cbe7ac.PNG"><br>
+<br>
+ну и так далее. Приятно, что по умолчанию используется лаконичный дизайн мастера, без рюшечек (которые при желании можно добавить)<br>
+<br>
+Ну что сказать? Ура! Мы написали свой первый «сетап» и могли бы радоваться, но<br>
+<br>
+<h1>2. Развертывание .NET Framework</h1><br>
+<br>
+Вы не заметили, что мы о чем-то забыли? Приложение, созданное на C# не будет работать без фреймворка, с которым оно было собрано, если таковой отсутствует в системе. Соответствующий фреймворк надо установить, а для этого необходимо<br>
+<br>
+<ol>
+<li>Определиться с тем, как будем получать дистрибутив фреймворка. Тут есть два варианта — поставлять его вместе с дистрибутивом программы или, при необходимости установки загрузить его онлайн на целевую машину. Мы остановимся на варианте включения фреймворка в дистрибутив. Сам фреймфорк, скажем версии 4.0, можно <a href="http://www.microsoft.com/ru-ru/download/details.aspx?id=17718">взять бесплатно у Майкрософта</a></li>
+<li>Детектировать наличие/отсутствие данного фреймфорка в целевой системе. Для этого потребуется написать логику, анализирующую состояние системного реестра.</li>
+</ol><br>
+<br>
+Значения в реестре, которые необходимо проверить приведены в <a href="https://support.microsoft.com/ru-ru/kb/318785">официальной документации Microsoft</a>, в статье я приведу краткую выжимку из неё<br>
+<br>
+<b>Таблица 1</b>. Ключи реестра, для проверки установленной версии .NET Framework<br>
+<div class="table table_wrapped"><table>
+<tbody><tr>
+<th>Версия .NET</th>
+<th>Ключ реестра</th>
+<th>Значение</th>
+</tr>
+<tr>
+<td>3.0</td>
+<td>HKLM\Software\Microsoft\NET Framework Setup\NDP\v3.0\Setup\InstallSuccess</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>HKLM\Software\Microsoft\NET Framework Setup\NDP\v3.0\Setup\Install</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4.0 Client Profile</td>
+<td>HKLM\Software\Microsoft\NET Framework Setup\NDP\v4.0\Client\Install</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4.0 Full Profile</td>
+<td>HKLM\Software\Microsoft\NET Framework Setup\NDP\v4.0\Full\Install</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>HKLM\Software\Microsoft\NET Framework Setup\NDP\v4.0\Full\Release</td>
+<td>номер релиза</td>
+</tr>
+</tbody></table></div><br>
+<br>
+Для реализации произвольной логики работы инсталлятора в Inno Setup предусмотрена секция <b>[Code]</b>. В пределах этой секции размещается код реализующих логику функций на языке Pascal. Содежимое этой секции мы вынесем в отдельный файл <b>dotnet.pas</b> и включим в основной скрипт дерективой #include<br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Секция кода включенная из отдельного файла
+;------------------------------------------------------------------------------
+[Code]
+#include "dotnet.pas"
+</code></pre><br>
+<br>
+хотя можно набить код и непосредственно в секции <b>[Code]</b>. Надо помнить, что внутри этой секции используется синтаксис Pascal, и комментарии предваряются последовательностью "//" вместо используемой в основной части скрипта точки с запятой.<br>
+<br>
+Напишем функцию, определяющую наличие в системе нужной версии .NET<br>
+<br>
+<pre><code>//-----------------------------------------------------------------------------
+//  Проверка наличия нужного фреймворка
+//-----------------------------------------------------------------------------
+function IsDotNetDetected(version: string; release: cardinal): boolean;
+
+var 
+    reg_key: string; // Просматриваемый подраздел системного реестра
+    success: boolean; // Флаг наличия запрашиваемой версии .NET
+    release45: cardinal; // Номер релиза для версии 4.5.x
+    key_value: cardinal; // Прочитанное из реестра значение ключа
+    sub_key: string;
+
+begin
+
+    success := false;
+    reg_key := 'SOFTWARE\Microsoft\NET Framework Setup\NDP\';
+    
+    // Вресия 3.0
+    if Pos('v3.0', version) = 1 then
+      begin
+          sub_key := 'v3.0';
+          reg_key := reg_key + sub_key;
+          success := RegQueryDWordValue(HKLM, reg_key, 'InstallSuccess', key_value);
+          success := success and (key_value = 1);
+      end;
+
+    // Вресия 3.5
+    if Pos('v3.5', version) = 1 then
+      begin
+          sub_key := 'v3.5';
+          reg_key := reg_key + sub_key;
+          success := RegQueryDWordValue(HKLM, reg_key, 'Install', key_value);
+          success := success and (key_value = 1);
+      end;
+
+     // Вресия 4.0 клиентский профиль
+     if Pos('v4.0 Client Profile', version) = 1 then
+      begin
+          sub_key := 'v4\Client';
+          reg_key := reg_key + sub_key;
+          success := RegQueryDWordValue(HKLM, reg_key, 'Install', key_value);
+          success := success and (key_value = 1);
+      end;
+
+     // Вресия 4.0 расширенный профиль
+     if Pos('v4.0 Full Profile', version) = 1 then
+      begin
+          sub_key := 'v4\Full';
+          reg_key := reg_key + sub_key;
+          success := RegQueryDWordValue(HKLM, reg_key, 'Install', key_value);
+          success := success and (key_value = 1);
+      end;
+
+     // Вресия 4.5
+     if Pos('v4.5', version) = 1 then
+      begin
+          sub_key := 'v4\Full';
+          reg_key := reg_key + sub_key;
+          success := RegQueryDWordValue(HKLM, reg_key, 'Release', release45);
+          success := success and (release45 &gt;= release);
+      end;
+        
+    result := success;
+
+end;
+</code></pre><br>
+<br>
+Не смотря на обилие кода, логика его работы достаточно проста — в зависимости от значения параметра version с помощью функции RegQueryDWordValue(...) читается значение соответствующего ключа реестра и сравнивается с требуемым значением (смотрим таблицу 1). Для версии 4.5 дополнительно передаем номер релиза в параметре release.<br>
+<br>
+Для того приложения, которое мы будем развертывать, нужна вполне определенная версия .NET, поэтому напишем функцию-обертку для её определения в целевой системе<br>
+<br>
+<pre><code>//-----------------------------------------------------------------------------
+//  Функция-обертка для детектирования конкретной нужной нам версии
+//-----------------------------------------------------------------------------
+function IsRequiredDotNetDetected(): boolean;
+begin
+    result := IsDotNetDetected('v4.0 Full Profile', 0);
+end;
+</code></pre><br>
+<br>
+Для того, чтобы перед началом установки проверить наличие фреймворка и сообщить пользователю о предпринимаемых действиях используем Callback-функцию InitializeSetup()<br>
+<br>
+<pre><code>//-----------------------------------------------------------------------------
+//    Callback-функция, вызываемая при инициализации установки
+//-----------------------------------------------------------------------------
+function InitializeSetup(): boolean;
+begin
+
+  // Если нет тербуемой версии .NET выводим сообщение о том, что инсталлятор
+  // попытается установить её на данный компьютер
+  if not IsDotNetDetected('v4.0 Full Profile', 0) then
+    begin
+      MsgBox('{#Name} requires Microsoft .NET Framework 4.0 Full Profile.'#13#13
+             'The installer will attempt to install it', mbInformation, MB_OK);
+    end;   
+
+  result := true;
+end;
+</code></pre><br>
+<br>
+Теперь в секцию <b>[Files]</b> добавим запись о том, где компилятор должен взять дистрибутив .NET, куда инсталлятор он должен её распаковать, и при каких условиях следует выполнять распаковку<br>
+<br>
+<pre><code>; .NET Framework 4.0
+Source: "E:\install\dotNetFx40_Full_x86_x64.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall; Check: not IsRequiredDotNetDetected
+</code></pre><br>
+<br>
+Во флагах скажем, что надо удалить дистрибутив .NET после установки (deleteafterinstall). Условие, при котором требуется распаковка задаем опцией <b>Check</b>, где вызываем функцию IsRequiredDotNetDetected(), выполняя распаковку ели она вернет false.<br>
+<br>
+Сам запуск инсталляции фрейворка можно выполнить после установки основной программы, поэтому включаем в скрипт секцию <b>[Run]</b>, в которой указывается, что необходимо запускать по окончании установки<br>
+<br>
+<pre><code>;------------------------------------------------------------------------------
+;   Секция кода включенная из отдельного файла
+;------------------------------------------------------------------------------
+[Code]
+#include "dotnet.pas"
+
+[Run]
+;------------------------------------------------------------------------------
+;   Секция запуска после инсталляции
+;------------------------------------------------------------------------------
+Filename: {tmp}\dotNetFx40_Full_x86_x64.exe; Parameters: "/q:a /c:""install /l /q"""; Check: not IsRequiredDotNetDetected; StatusMsg: Microsoft Framework 4.0 is installed. Please wait...
+</code></pre><br>
+<br>
+Обратите внимание на то, что мы сначала указываем имя секции [Run], чтобы закрыть секцию [Code], а затем пишем комментарий начинающийся с точки с запятой. Это необходимо из-за различия синтаксиса основного скрипта и секции [Code], в противном случае при компиляции мы получим синтаксическую ошибку.<br>
+<br>
+В секции задается путь к инсталлятору фреймворка — предварительно он распакован нами во временный каталог (переменная <b>{tmp}</b> содержит путь к веременному каталогу); задаются параметры командной строки. Опция <b>Check</b> определяет условие запуска инсталляции — это отсутствие в целевой системе нужного нам фреймворка. Опция <b>StatusMsg</b> определяет сообщение, которое увидит пользователь в окне инсталлера.<br>
+<br>
+Снова компилируем наш проект. Теперь, при запуске на «чистой» винде инсталлятор выдаст сообщение<br>
+<br>
+<i>Нам сообщают что требуется .NET Framework 4.0 и для нас его установят</i><br>
+<img src="https://habrastorage.org/files/5be/de0/b26/5bede0b261c44944a9a81fa5bde05c58.PNG"><br>
+<br>
+При распаковке мы заметим, что дополнительно распаковывает дистрибутив .NET во временную папку<br>
+<br>
+<img src="https://habrastorage.org/files/fc1/54e/0bd/fc154e0bd2ff43aab48a01be8415c33f.PNG"><br>
+<br>
+а затем процесс переключается на установку .NET<br>
+<br>
+<i>Майкрософт просит нас принять лицензию...</i><br>
+<img src="https://habrastorage.org/files/5b0/4eb/cab/5b04ebcabc604b0589bcfcef8c00a0f4.PNG"><br>
+<br>
+<i>Установка .NET</i><br>
+<img src="https://habrastorage.org/files/040/b41/095/040b410957fd426e932d2674c03f5948.PNG"><br>
+<br>
+После этого мы получаем работоспособное C# приложение установленное «по взрослому»<br>
+<br>
+<h1>Заключение</h1><br>
+<br>
+Я не профессионал и во многих вещах могу ошибаться. Прошу отнестись к этому с пониманием. Статья писалась нубом для нубов, её основная цель — задать вектор поиска при решении задачи написания инсталлятора. За остальными вопросами можно обратится к документации, поставляемой вместе с Inno Setup.<br>
+<br>
+<a href="https://github.com/maisvendoo/test-setup">Код данного примера доступен</a> в моем репозитории на Github. «Кракозябры» в комментах вызваны несовпадением кирилических кодировок. Для себя всегда пишу английские комментарии, но для лучшего понимания кода допустил этот ляп. При скачивании в винде всё просматривается замечательно, так что прошу простить мне и эту несуразность.<br>
+<br>
+В остальном, полагаю «хаутушка» вышла достойной и благодарю за уделенное мне внимание.</div></div></div> <div class="v-portal" style="display: none;"></div> <div class="v-portal" style="display: none;"></div></div> <div aria-hidden="true" role="dialog" tabindex="-1" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><span class="tm-svg-icon__wrapper pswp__button pswp__button--close"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Закрыть</title> <use xlink:href="/img/megazord-v28.faec9762..svg#close"></use></svg></span> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <button class="pswp__button pswp__button--arrow--left"><svg viewBox="0 0 24 24" class="pswp__button-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414L9.414 12l6.293 6.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 011.414 0z"></path></svg></button> <button class="pswp__button pswp__button--arrow--right"><svg viewBox="0 0 24 24" class="pswp__button-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414L9.414 12l6.293 6.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 011.414 0z"></path></svg></button></div></div></div> <!----></div> <!----> <div class="tm-article-presenter__meta"><div class="tm-article-presenter__meta-list tm-separated-list"><span class="tm-separated-list__title">Теги:</span> <ul class="tm-separated-list__list"><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Binno%20setup%5D" class="tm-tags-list__link">inno setup</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Bopen%20source%5D" class="tm-tags-list__link">open source</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%BD%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0%5D" class="tm-tags-list__link">создание инсталлятора</a></li> <!----></ul></div> <div class="tm-article-presenter__meta-list tm-separated-list"><span class="tm-separated-list__title">Хабы:</span> <ul class="tm-separated-list__list"><li class="tm-separated-list__item"><a href="/ru/hubs/webdev/" class="tm-hubs-list__link">Веб-разработка</a></li><li class="tm-separated-list__item"><a href="/ru/hubs/open_source/" class="tm-hubs-list__link">Open source</a></li><li class="tm-separated-list__item"><a href="/ru/hubs/programming/" class="tm-hubs-list__link">Программирование</a></li> <!----></ul></div></div> <!----></article>
+<script src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/chunk-vendors.3a359bdb.js.загрузка" defer=""></script><script src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/7298.c8f1d73c.js.загрузка" defer=""></script><script src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/app.42ccfef0.js.загрузка" defer=""></script>
+
+
+
+    <script async="" src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+  
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/24049213" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+    <script type="text/javascript">
+      window.addEventListener('load', function () {
+        setTimeout(() => {
+          const img = new Image();
+          img.src = 'https://vk.com/rtrg?p=VK-RTRG-421343-57vKE';
+        }, 0);
+      });
+    </script>
+  
+<script src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/ads.js.загрузка" onload="window[&#39;zhY4i4nJ9K&#39;] = true"></script><div id="K9Jn4i4Yhz" style="display: none;"></div>
+
+
+<div><div><div class="Vue-Toastification__container top-left"></div></div><div><div class="Vue-Toastification__container top-center"></div></div><div><div class="Vue-Toastification__container top-right"></div></div><div><div class="Vue-Toastification__container bottom-left"></div></div><div><div class="Vue-Toastification__container bottom-center"></div></div><div><div class="Vue-Toastification__container bottom-right"></div></div></div><iframe class="rse-ume" scrolling="no" seamless="seamless" style="border: 0px; margin: 0px; padding: 0px; width: 1px; height: 1px; display: inline-block; vertical-align: top; position: absolute; left: 0px; top: 0px; overflow: hidden;" src="./Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/saved_resource.html"></iframe></body></html>
