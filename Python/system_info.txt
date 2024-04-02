@@ -1,5 +1,0 @@
-OS: Windows
-Release: 10
-Version: 10.0.22631
-Machine: AMD64
-Processor: AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
