@@ -43,7 +43,7 @@ CD "ProgramingAlmanac"
 ATTRIB -S -H desktop.ini
 echo. > desktop.ini
 
-call :add_to_file [.ShellClassInfo]
+echo [.ShellClassInfo] > desktop.ini
 call :add_to_file ConfirmFileOp=0
 call :add_to_file NoSharing=1
 call :add_to_file IconResource=D:\ProgramingAlmanac\.source\book-icon.icl,%ICON_TYPE%
