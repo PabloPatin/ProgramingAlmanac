@@ -34,19 +34,19 @@ if %ICON_TYPE% == 0 (
     )
 )
 
-cd /D D:\
+cd /D ".."
 
 attrib +s "ProgramingAlmanac"
 
 CD "ProgramingAlmanac"
 
 ATTRIB -S -H desktop.ini
-del desktop.ini
+echo. > desktop.ini
 
-call :add_to_file [.ShellClassInfo]
+echo [.ShellClassInfo] > desktop.ini
 call :add_to_file ConfirmFileOp=0
 call :add_to_file NoSharing=1
-call :add_to_file IconResource=D:\ProgramingAlmanac\.source\book-icon.icl,%ICON_TYPE%
+call :add_to_file IconResource=D:\ProgramingAlmanac\book-icon.icl,%ICON_TYPE%
 call :add_to_file InfoTip=My own library of programing knowledge
 call :add_to_file LocalizedDisplayName="Библиотека знаний"
 call :add_to_file [ViewState]
