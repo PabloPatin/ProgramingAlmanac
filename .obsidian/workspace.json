@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine_Learning/Activations/Activations.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine_Learning/Activations/Activations.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine_Learning/Activations/Activations.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine_Learning/Activations/Activations.md"
+                "file": "README.md"
               }
             }
           }
@@ -149,13 +149,18 @@
   },
   "active": "c686702a663a7000",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "README.md",
     "Machine_Learning/Network_Types/Regression.md",
+    "2024-04-18.md",
+    "2024-08-07.md",
+    "Windows/Taskschd.msc/Запуск задачи в фоне.PNG",
+    "Machine_Learning/Activations/Activations.md",
     "Machine_Learning/Network_Types",
     "Machine_Learning/Activations/Tanh.png",
     "Machine_Learning/Activations/Sigmoid.png",
     "Machine_Learning/Activations/ReLU.png",
     "Machine_Learning/Activations/ELU.png",
-    "Machine_Learning/Activations/Activations.md",
     "Python/Machine_Learning/Activations/Activations.md",
     "Machine_Learning/Activations",
     "Machine_Learning",
@@ -166,12 +171,9 @@
     "Activations",
     "Python/Machine_Learning/Activations/ReLU.png",
     "Python/Machine_Learning/Activations/Sigmoid.png",
-    "Python/Machine_Learning/Activations/Sygmoid.png",
     "Python/Machine_Learning/Activations/new.md",
     "Python/Machine_Learning/Activations",
     "Python/Machine_Learning/Новая папка",
-    "2024-04-18.md",
-    "Untitled.canvas",
     "Python/Machine_Learning/Activations.md"
   ]
 }
