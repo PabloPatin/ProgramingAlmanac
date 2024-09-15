@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Пример разметки .md файлов.md",
-                "mode": "preview",
+                "file": "Databases/PostgreSQL/Введение в Postgres.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bdb04bfe7104657d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian/Пример разметки .md файлов.md",
+                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian/Пример разметки .md файлов.md",
+                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian/Пример разметки .md файлов.md"
+                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md"
               }
             }
           }
@@ -147,10 +160,15 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "df835227d2b174ea",
+  "active": "bdb04bfe7104657d",
   "lastOpenFiles": [
-    "Obsidian/Создание ссылки.md",
+    "Databases/PostgreSQL/Введение в Postgres.md",
+    "Databases/PostgreSQL/Создание нового сервера Postgres.md",
+    "Databases/PostgreSQL/initdb.md",
     "Obsidian/Пример разметки .md файлов.md",
+    "Databases/PostgreSQL",
+    "Databases",
+    "Obsidian/Создание ссылки.md",
     "дштл.md",
     "Inno_Setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/fc154e0bd2ff43aab48a01be8415c33f.PNG",
     "Inno_Setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/f3de50ca389143a9b3a02988dcc6edc5.PNG",
