@@ -16,7 +16,9 @@
                 "file": "Databases/PostgreSQL/Введение в Postgres.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Введение в Postgres"
             }
           },
           {
@@ -28,11 +30,25 @@
                 "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Создание нового сервера Postgres"
+            }
+          },
+          {
+            "id": "1d8a1bf7113669b9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -52,7 +68,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -67,7 +85,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -75,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -98,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md",
+                "file": "Databases/PostgreSQL/Введение в Postgres.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +128,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Введение в Postgres"
             }
           },
           {
@@ -115,10 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md",
+                "file": "Databases/PostgreSQL/Введение в Postgres.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Введение в Postgres"
             }
           },
           {
@@ -129,7 +155,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -138,8 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databases/PostgreSQL/Создание нового сервера Postgres.md"
-              }
+                "file": "Databases/PostgreSQL/Введение в Postgres.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Введение в Postgres"
             }
           }
         ]
@@ -160,7 +190,7 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "bdb04bfe7104657d",
+  "active": "1d8a1bf7113669b9",
   "lastOpenFiles": [
     "Databases/PostgreSQL/Введение в Postgres.md",
     "Databases/PostgreSQL/Создание нового сервера Postgres.md",
