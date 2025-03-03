@@ -46,9 +46,21 @@
               "icon": "lucide-file",
               "title": "Release Notes 1.7.5"
             }
+          },
+          {
+            "id": "6dfafc80d819cd06",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -190,7 +202,7 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "1d8a1bf7113669b9",
+  "active": "6dfafc80d819cd06",
   "lastOpenFiles": [
     "Databases/PostgreSQL/Введение в Postgres.md",
     "Databases/PostgreSQL/Создание нового сервера Postgres.md",
