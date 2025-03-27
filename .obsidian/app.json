@@ -1,1 +1,10 @@
-{}
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "unsorted",
+  "attachmentFolderPath": "files",
+  "userIgnoreFilters": [
+    "files/"
+  ]
+}

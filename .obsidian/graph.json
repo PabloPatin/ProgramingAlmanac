@@ -3,20 +3,35 @@
   "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#python  ",
+      "color": {
+        "a": 1,
+        "rgb": 9788341
+      }
+    },
+    {
+      "query": "tag:#сети  ",
+      "color": {
+        "a": 1,
+        "rgb": 5731327
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 1.0229505107204677,
-  "close": false
+  "centerStrength": 0.354469854469854,
+  "repelStrength": 8.004158004158,
+  "linkStrength": 0.899168399168399,
+  "linkDistance": 257,
+  "scale": 0.6003342172191433,
+  "close": true
 }
