@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unsorted/метод k ближайших соседей.md",
+                "file": "projects/ImageWizard/Задачи по проекту.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "метод k ближайших соседей"
+              "title": "Задачи по проекту"
             }
           },
           {
@@ -98,13 +98,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "unsorted/метод k ближайших соседей.md",
+                "file": "projects/ImageWizard/Задачи по проекту.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of метод k ближайших соседей"
+              "title": "Outline of Задачи по проекту"
             }
           },
           {
@@ -159,12 +159,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "unsorted/метод k ближайших соседей.md",
+                "file": "projects/ImageWizard/Задачи по проекту.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from метод k ближайших соседей"
+              "title": "Outgoing links from Задачи по проекту"
             }
           }
         ]
@@ -179,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "unsorted/метод k ближайших соседей.md",
+                "file": "projects/ImageWizard/Задачи по проекту.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +189,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for метод k ближайших соседей"
+              "title": "Backlinks for Задачи по проекту"
             }
           }
         ]
@@ -212,8 +212,11 @@
   },
   "active": "615a285b4b390eab",
   "lastOpenFiles": [
-    "archive/машинное_обучение/метрические методы классификации и регрессии.md",
+    "archive/машинное_обучение/функции активации.md",
+    "projects/ImageWizard/Задачи по проекту.md",
+    "projects/ImageWizard",
     "unsorted/метод k ближайших соседей.md",
+    "archive/машинное_обучение/метрические методы классификации и регрессии.md",
     "unsorted/наивный байесовский классификатор.md",
     "archive/obsidian/пример разметки .md файлов.md",
     "unsorted/административное расстояние.md",
@@ -237,8 +240,6 @@
     "unsorted/read uncommited.md",
     "unsorted/read commited.md",
     "unsorted/repeatable read.md",
-    "unsorted/serializable.md",
-    "archive/базы_данных/mysql/MySQL.md",
     "archive/базы_данных/mysql",
     "archive/базы_данных/SQL",
     "archive/сети/cisco",
@@ -258,7 +259,6 @@
     "Untitled",
     "periodic",
     "projects",
-    "files",
     "Networks/images/Схемы ранговых сетей.canvas"
   ]
 }
