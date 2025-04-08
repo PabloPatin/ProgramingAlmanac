@@ -11,10 +11,14 @@
             "id": "327ded9bb9b74d3c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "unsorted/симуляция формовки.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "симуляция формовки"
             }
           }
         ]
@@ -80,13 +84,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/ImageWizard/Задачи по проекту.md",
+                "file": "unsorted/симуляция формовки.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Задачи по проекту"
+              "title": "Outline of симуляция формовки"
             }
           },
           {
@@ -141,12 +145,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/ImageWizard/Задачи по проекту.md",
+                "file": "unsorted/симуляция формовки.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Задачи по проекту"
+              "title": "Outgoing links from симуляция формовки"
             }
           }
         ]
@@ -161,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/ImageWizard/Задачи по проекту.md",
+                "file": "unsorted/симуляция формовки.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +175,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Задачи по проекту"
+              "title": "Backlinks for симуляция формовки"
             }
           }
         ]
@@ -192,16 +196,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1091e37bdffdef81",
+  "active": "327ded9bb9b74d3c",
   "lastOpenFiles": [
+    "files/Pasted image 20250408222120.png",
+    "files/Pasted image 20250408215937.png",
+    "files/Pasted image 20250408215117.png",
+    "files/Pasted image 20250408211429.png",
+    "files/Pasted image 20250408211137.png",
+    "files/Pasted image 20250408211055.png",
+    "files/Pasted image 20250408210959.png",
+    "files/Pasted image 20250408210942.png",
+    "files/Pasted image 20250408210258.png",
+    "files/Pasted image 20250408210124.png",
+    "unsorted/симуляция формовки.md",
+    "files/Pasted image 20250408205010.png",
+    "unsorted/Untitled.md",
+    "unsorted/формализация.md",
+    "unsorted/Untitled 1.md",
     "unsorted/serializable.md",
     "archive/базы_данных/SQL/транзакции.md",
     "archive/базы_данных/SQL/триггеры.md",
     "archive/базы_данных/SQL/стандарт ANSI.md",
     "unsorted/марковские модели принятия решений.md",
     "unsorted/Ключи.md",
-    "unsorted/Формализация.md",
-    "unsorted/Untitled.md",
     "projects/ImageWizard/Задачи по проекту.md",
     "archive/машинное_обучение/функции активации.md",
     "projects/ImageWizard",
@@ -219,23 +236,10 @@
     "archive/сети/протоколы/сетевой уровень/IPv4/IPv4 адресация.md",
     "archive/сети/протоколы/сетевой уровень/IPv6",
     "unsorted/таблица маршрутизации.md",
-    "archive/сети/экстранет.md",
-    "archive/сети/хост.md",
-    "archive/сети/сервер.md",
     "archive/базы_данных/mysql",
     "archive/базы_данных/SQL",
     "archive/сети/cisco",
     "Untitled.canvas",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/f3de50ca389143a9b3a02988dcc6edc5.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/fc154e0bd2ff43aab48a01be8415c33f.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/da7848fd39f24d8ead65426cc7d218e5.png",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/080473d6d04140c0b2f92adbb376c165.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/430f9436b35442d1b9c06d2d66b91ec4.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/9c3ec4e484a3402eb62af12bad24e410.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/5bede0b261c44944a9a81fa5bde05c58.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/5b04ebcabc604b0589bcfcef8c00a0f4.PNG",
-    "archive/inno_setup/Inno Setup_ создание инсталлятора на примере развертывания C# приложения _ Хабр_files/5ada0cca2363451e812dcef9287db00c.PNG",
-    "files/ELU.png",
     "archive/языки_программирования",
     "archive",
     "Untitled",
