@@ -39,12 +39,12 @@
             "id": "4a55121657c834e4",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "image",
               "state": {
-                "currentVersion": "1.8.10"
+                "file": "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG"
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
+              "icon": "lucide-image",
+              "title": "Запуск задачи в фоне"
             }
           }
         ],
@@ -173,11 +173,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Запуск задачи в фоне"
             }
           }
         ]
@@ -192,6 +193,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +203,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Запуск задачи в фоне"
             }
           }
         ]
