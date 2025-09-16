@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "archive/базы_данных/SQL/индексы.md",
+                "file": "archive/сети/Режимы коммутации.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "индексы"
+              "title": "Режимы коммутации"
             }
           }
         ]
@@ -146,12 +146,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "archive/базы_данных/SQL/индексы.md",
+                "file": "archive/сети/Режимы коммутации.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from индексы"
+              "title": "Outgoing links from Режимы коммутации"
             }
           }
         ]
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "archive/базы_данных/SQL/индексы.md",
+                "file": "archive/сети/Режимы коммутации.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +176,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for индексы"
+              "title": "Backlinks for Режимы коммутации"
             }
           }
         ]
@@ -187,6 +187,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -199,8 +200,9 @@
   },
   "active": "4a55121657c834e4",
   "lastOpenFiles": [
-    "archive/базы_данных/SQL/селективность запроса.md",
     "archive/базы_данных/SQL/индексы.md",
+    "archive/сети/Режимы коммутации.md",
+    "archive/базы_данных/SQL/селективность запроса.md",
     "archive/сети/протоколы/сетевой уровень/IPv4/IPv4 адресация.md",
     "unsorted/Метод Куайна.md",
     "unsorted/Untitled.md",
@@ -222,7 +224,6 @@
     "archive/сети/интранет.md",
     "archive/сети/интернет.md",
     "unsorted/теория важности критериев.md",
-    "archive/сети/Untitled.md",
     "archive/сети/организации/IETF.md",
     "archive/сети/организации/ICANN.md",
     "archive/сети/организации/IANA.md",
