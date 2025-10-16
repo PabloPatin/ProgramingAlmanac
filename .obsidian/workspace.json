@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "archive/базы_данных/OLAP.md",
+                "file": "projects/ozon helper.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OLAP"
+              "title": "ozon helper"
             }
           }
         ],
@@ -189,12 +189,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "archive/базы_данных/OLAP.md",
+                "file": "projects/ozon helper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from OLAP"
+              "title": "Outgoing links from ozon helper"
             }
           }
         ]
@@ -209,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "archive/базы_данных/OLAP.md",
+                "file": "projects/ozon helper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +219,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for OLAP"
+              "title": "Backlinks for ozon helper"
             }
           }
         ]
@@ -243,8 +243,12 @@
   },
   "active": "59ee1508d75de724",
   "lastOpenFiles": [
+    "projects/ImageWizard/Задачи по проекту.md",
     "archive/базы_данных/OLTP.md",
     "archive/базы_данных/OLAP.md",
+    "archive/машинное_обучение/метрические методы классификации и регрессии.md",
+    "archive/машинное_обучение/функции активации.md",
+    "archive/obsidian/пример разметки .md файлов.md",
     "archive/базы_данных/PHP/CMS.md",
     "unsorted/Представления.md",
     "archive/базы_данных/PHP",
@@ -266,14 +270,10 @@
     "archive/базы_данных/SQL/стандарт ANSI.md",
     "archive/базы_данных/SQL/транзакции.md",
     "archive/базы_данных/SQL/триггеры.md",
-    "archive/базы_данных/SQL/курсоры.md",
     "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG",
-    "unsorted/Подготовка к зачёту.md",
     "files/Pasted image 20250424220150.png",
-    "unsorted/симуляция формовки.md",
     "files/Pasted image 20250407123543.png",
     "files/Pasted image 20250408100704.png",
-    "unsorted/административное расстояние.md",
     "files/Pasted image 20250408230328.png",
     "files/Pasted image 20250408225238.png",
     "files/Pasted image 20250408224746.png",
