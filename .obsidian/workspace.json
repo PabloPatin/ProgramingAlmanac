@@ -8,23 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "59ee1508d75de724",
+            "id": "17cac76948e99a72",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "учёба/kanban.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "учёба/долги 7 сем.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "kanban"
+              "icon": "lucide-file",
+              "title": "долги 7 сем"
             }
           }
         ]
@@ -120,7 +114,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Норм",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -152,12 +146,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "учёба/kanban.md",
+                "file": "учёба/долги 7 сем.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from kanban"
+              "title": "Outgoing links from долги 7 сем"
             }
           }
         ]
@@ -172,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "учёба/kanban.md",
+                "file": "учёба/долги 7 сем.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +176,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for kanban"
+              "title": "Backlinks for долги 7 сем"
             }
           }
         ]
@@ -205,39 +199,40 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "59ee1508d75de724",
+  "active": "17cac76948e99a72",
   "lastOpenFiles": [
-    "учёба/долги 7 сем.md",
     "учёба/kanban.md",
-    "unsorted/статус сети.md",
     "учёба/календарный план выполнения работ.md",
-    "учёба",
-    "templates/шаблон содержания.md",
-    "homepage.md",
-    "unsorted/Untitled.md",
-    "unsorted/Untitled.base",
+    "archive/базы_данных/нормализация.md",
     "archive/языки_программирования/python 3/библиотеки/alembic/команды alembic.md",
+    "archive/базы_данных/OLAP.md",
+    "homepage.md",
     "unsorted/EXPLAIN.md",
+    "unsorted/формализация.md",
     "unsorted/DML.md",
     "unsorted/deprecated.md",
+    "unsorted/тип маршрута.md",
+    "unsorted/симуляция формовки.md",
+    "unsorted/репликация.md",
+    "unsorted/представления.md",
+    "unsorted/партицирование.md",
+    "unsorted/организация управления производством.md",
+    "unsorted/октет.md",
+    "unsorted/наследование.md",
+    "unsorted/наивный байесовский классификатор.md",
+    "unsorted/многопоточность и распараллеливание.md",
+    "unsorted/метрика.md",
+    "unsorted/метод опорных векторов.md",
+    "unsorted/метод Куайна.md",
+    "unsorted/маршрутизатор.md",
+    "unsorted/марковские модели принятия решений.md",
+    "unsorted/динамическая трассировка.md",
+    "files/Pasted image 20251201113045.png",
+    "учёба",
+    "unsorted/Untitled.base",
     "files/13.5.1;Липатников П.А.;ИАС-22.pka",
-    "unsorted/Организация управления производством.md",
-    "archive/базы_данных/SQL/индексы.md",
-    "archive/базы_данных/mysql/MySQL.md",
     "archive/языки_программирования/python 3/библиотеки/alembic",
-    "archive/базы_данных/mysql/хранимые конструкции.md",
-    "archive/базы_данных/OLTP.md",
-    "projects/ozon helper.md",
-    "projects/ImageWizard/Задачи по проекту.md",
-    "archive/базы_данных/OLAP.md",
-    "archive/машинное_обучение/метрические методы классификации и регрессии.md",
-    "archive/машинное_обучение/функции активации.md",
-    "archive/obsidian/пример разметки .md файлов.md",
-    "archive/базы_данных/PHP/CMS.md",
-    "unsorted/Представления.md",
     "archive/базы_данных/PHP",
-    "archive/базы_данных/SQL/курсор.md",
-    "archive/базы_данных/SQL/b-tree.md",
     "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG",
     "files/Pasted image 20250424220150.png",
     "files/Pasted image 20250407123543.png",
@@ -247,7 +242,6 @@
     "files/Pasted image 20250408224746.png",
     "files/Pasted image 20250408224725.png",
     "files/Pasted image 20250408222120.png",
-    "files/Pasted image 20250408215937.png",
     "projects/ImageWizard",
     "archive/сети/протоколы/сетевой уровень/IPv6",
     "archive/базы_данных/mysql",

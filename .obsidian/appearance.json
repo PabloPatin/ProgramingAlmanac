@@ -2,5 +2,8 @@
   "accentColor": "",
   "baseFontSize": 18,
   "baseFontSizeAction": true,
-  "showRibbon": true
+  "showRibbon": true,
+  "enabledCssSnippets": [
+    "no_space_above_table"
+  ]
 }

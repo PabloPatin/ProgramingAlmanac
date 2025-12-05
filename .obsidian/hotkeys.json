@@ -81,15 +81,6 @@
       "key": "P"
     }
   ],
-  "templater-obsidian:Templates/Шаблон содержания.md": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "T"
-    }
-  ],
   "editor:insert-wikilink": [
     {
       "modifiers": [
@@ -113,6 +104,24 @@
         "Mod"
       ],
       "key": "ArrowUp"
+    }
+  ],
+  "editor:insert-table": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ],
+  "templater-obsidian:Templates/Шаблон содержания.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "T"
     }
   ]
 }
