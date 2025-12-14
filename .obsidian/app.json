@@ -6,5 +6,6 @@
   "attachmentFolderPath": "files",
   "userIgnoreFilters": [
     "files/"
-  ]
+  ],
+  "showLineNumber": false
 }

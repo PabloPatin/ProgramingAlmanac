@@ -4,24 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "40512e963473f67a",
+        "id": "7e771df77dd8b5fe",
         "type": "tabs",
         "children": [
           {
-            "id": "17cac76948e99a72",
+            "id": "8d67e4b439dfcbff",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "учёба/kanban.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false
+                  ]
+                }
+              },
+              "icon": "lucide-trello",
+              "title": "kanban"
+            }
+          },
+          {
+            "id": "eb81cae8fc1872e3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "учёба/долги 7 сем.md",
+                "file": "unsorted/Кузьмин экзамен системы ИИ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "долги 7 сем"
+              "title": "Кузьмин экзамен системы ИИ"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -114,7 +135,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Норм",
+                "query": "tag:#вопрос_10",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -130,7 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 200
   },
   "right": {
     "id": "0dca0fc2d1381a7f",
@@ -146,12 +167,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "учёба/долги 7 сем.md",
+                "file": "archive/базы_данных/OLTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from долги 7 сем"
+              "title": "Outgoing links from OLTP"
             }
           }
         ]
@@ -166,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "учёба/долги 7 сем.md",
+                "file": "archive/базы_данных/OLTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,14 +197,15 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for долги 7 сем"
+              "title": "Backlinks for OLTP"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 367.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,13 +221,30 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "17cac76948e99a72",
+  "active": "eb81cae8fc1872e3",
   "lastOpenFiles": [
     "учёба/kanban.md",
+    "unsorted/Кузьмин экзамен системы ИИ.md",
+    "учёба/организация управления производством.md",
     "учёба/календарный план выполнения работ.md",
+    "учёба/Защита лекций БД.md",
+    "учёба/долги 7 сем.md",
+    "archive/базы_данных/OLTP.md",
+    "archive/базы_данных/OLAP.md",
+    "учёба/оуп шпора.md",
+    "unsorted/Untitled 1.base",
+    "unsorted/Untitled.base",
+    "учёба/тесты жука.md",
+    "files/Pasted image 20251208123140.png",
+    "files/Pasted image 20251208122037.png",
+    "files/Pasted image 20251208113138.png",
+    "files/Pasted image 20251208112954.png",
+    "files/Pasted image 20251206212811.png",
+    "учёба/10 и 25.md",
+    "учёба/10 и 15.md",
+    "учёба/10 и 15 Липатников.md",
     "archive/базы_данных/нормализация.md",
     "archive/языки_программирования/python 3/библиотеки/alembic/команды alembic.md",
-    "archive/базы_данных/OLAP.md",
     "homepage.md",
     "unsorted/EXPLAIN.md",
     "unsorted/формализация.md",
@@ -217,19 +256,8 @@
     "unsorted/представления.md",
     "unsorted/партицирование.md",
     "unsorted/организация управления производством.md",
-    "unsorted/октет.md",
-    "unsorted/наследование.md",
-    "unsorted/наивный байесовский классификатор.md",
-    "unsorted/многопоточность и распараллеливание.md",
-    "unsorted/метрика.md",
-    "unsorted/метод опорных векторов.md",
-    "unsorted/метод Куайна.md",
-    "unsorted/маршрутизатор.md",
-    "unsorted/марковские модели принятия решений.md",
-    "unsorted/динамическая трассировка.md",
     "files/Pasted image 20251201113045.png",
     "учёба",
-    "unsorted/Untitled.base",
     "files/13.5.1;Липатников П.А.;ИАС-22.pka",
     "archive/языки_программирования/python 3/библиотеки/alembic",
     "archive/базы_данных/PHP",
@@ -237,16 +265,10 @@
     "files/Pasted image 20250424220150.png",
     "files/Pasted image 20250407123543.png",
     "files/Pasted image 20250408100704.png",
-    "files/Pasted image 20250408230328.png",
-    "files/Pasted image 20250408225238.png",
-    "files/Pasted image 20250408224746.png",
-    "files/Pasted image 20250408224725.png",
-    "files/Pasted image 20250408222120.png",
     "projects/ImageWizard",
     "archive/сети/протоколы/сетевой уровень/IPv6",
     "archive/базы_данных/mysql",
     "archive/базы_данных/SQL",
-    "archive/сети/cisco",
     "Untitled.canvas",
     "Networks/images/Схемы ранговых сетей.canvas"
   ]
