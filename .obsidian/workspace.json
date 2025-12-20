@@ -11,34 +11,28 @@
             "id": "8d67e4b439dfcbff",
             "type": "leaf",
             "state": {
-              "type": "kanban",
-              "state": {
-                "file": "учёба/kanban.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
-              },
-              "icon": "lucide-trello",
-              "title": "kanban"
-            }
-          },
-          {
-            "id": "eb81cae8fc1872e3",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "unsorted/Кузьмин экзамен системы ИИ.md",
+                "file": "archive/сети/протоколы/сетевой уровень/IPv6/IPv6 адресация.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Кузьмин экзамен системы ИИ"
+              "title": "IPv6 адресация"
+            }
+          },
+          {
+            "id": "bd2cd8f6aa69c657",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "учёба/Экзамен Катунцов.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Экзамен Катунцов"
             }
           }
         ],
@@ -135,7 +129,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#вопрос_10",
+                "query": "tag:#⏳",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -221,19 +215,35 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "eb81cae8fc1872e3",
+  "active": "bd2cd8f6aa69c657",
   "lastOpenFiles": [
-    "учёба/kanban.md",
-    "unsorted/Кузьмин экзамен системы ИИ.md",
+    "files/Pasted image 20251220001621.png",
+    "archive/сети/протоколы/сетевой уровень/IPv6/IPv6 адресация.md",
+    "unsorted/хекстет.md",
+    "учёба/Экзамен Катунцов.md",
+    "files/Pasted image 20251219142434.png",
+    "files/Pasted image 20251219135554.png",
+    "files/Pasted image 20251219134343.png",
+    "учёба/экзамен бабушка.md",
+    "учёба/Untitled",
+    "учёба/оуп шпора.md",
     "учёба/организация управления производством.md",
-    "учёба/календарный план выполнения работ.md",
     "учёба/Защита лекций БД.md",
+    "archive/языки_программирования/python 3/основы/типы данных python.md",
+    "archive/языки_программирования/python 3/основы/boolean.md",
+    "archive/языки_программирования/python 3/основы/floating point.md",
+    "archive/языки_программирования/python 3/основы/complex.md",
+    "archive/языки_программирования/python 3/основы/dictionary.md",
+    "archive/сети/cisco/Базовая конфигурация коммутатора.md",
+    "homepage.md",
+    "unsorted/Untitled 1.base",
+    "unsorted/Untitled.base",
+    "unsorted/Кузьмин экзамен системы ИИ.md",
+    "учёба/kanban.md",
+    "учёба/календарный план выполнения работ.md",
     "учёба/долги 7 сем.md",
     "archive/базы_данных/OLTP.md",
     "archive/базы_данных/OLAP.md",
-    "учёба/оуп шпора.md",
-    "unsorted/Untitled 1.base",
-    "unsorted/Untitled.base",
     "учёба/тесты жука.md",
     "files/Pasted image 20251208123140.png",
     "files/Pasted image 20251208122037.png",
@@ -244,31 +254,15 @@
     "учёба/10 и 15.md",
     "учёба/10 и 15 Липатников.md",
     "archive/базы_данных/нормализация.md",
-    "archive/языки_программирования/python 3/библиотеки/alembic/команды alembic.md",
-    "homepage.md",
-    "unsorted/EXPLAIN.md",
-    "unsorted/формализация.md",
-    "unsorted/DML.md",
-    "unsorted/deprecated.md",
-    "unsorted/тип маршрута.md",
-    "unsorted/симуляция формовки.md",
-    "unsorted/репликация.md",
-    "unsorted/представления.md",
-    "unsorted/партицирование.md",
-    "unsorted/организация управления производством.md",
     "files/Pasted image 20251201113045.png",
     "учёба",
     "files/13.5.1;Липатников П.А.;ИАС-22.pka",
     "archive/языки_программирования/python 3/библиотеки/alembic",
     "archive/базы_данных/PHP",
     "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG",
-    "files/Pasted image 20250424220150.png",
-    "files/Pasted image 20250407123543.png",
-    "files/Pasted image 20250408100704.png",
     "projects/ImageWizard",
     "archive/сети/протоколы/сетевой уровень/IPv6",
     "archive/базы_данных/mysql",
-    "archive/базы_данных/SQL",
     "Untitled.canvas",
     "Networks/images/Схемы ранговых сетей.canvas"
   ]
