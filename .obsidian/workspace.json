@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "IPv6 адресация"
             }
-          },
-          {
-            "id": "bd2cd8f6aa69c657",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "учёба/Экзамен Катунцов.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Экзамен Катунцов"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -48,7 +33,7 @@
       {
         "id": "0b9e085baa4c4f45",
         "type": "tabs",
-        "dimension": 67.01164294954722,
+        "dimension": 39.19793014230272,
         "children": [
           {
             "id": "0433f99e36b8d380",
@@ -91,7 +76,7 @@
       {
         "id": "1522fb31fdc01eec",
         "type": "tabs",
-        "dimension": 32.988357050452784,
+        "dimension": 60.802069857697276,
         "children": [
           {
             "id": "00584447f3dc0bd9",
@@ -99,13 +84,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "unsorted/Untitled.md",
+                "file": "archive/сети/протоколы/сетевой уровень/IPv6/IPv6 адресация.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of IPv6 адресация"
             }
           },
           {
@@ -116,7 +101,7 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
@@ -129,7 +114,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#⏳",
+                "query": "ANSI",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -161,12 +146,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "archive/базы_данных/OLTP.md",
+                "file": "учёба/Экзамен Катунцов.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from OLTP"
+              "title": "Outgoing links from Экзамен Катунцов"
             }
           }
         ]
@@ -181,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "archive/базы_данных/OLTP.md",
+                "file": "учёба/Экзамен Катунцов.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +176,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for OLTP"
+              "title": "Backlinks for Экзамен Катунцов"
             }
           }
         ]
@@ -215,12 +200,22 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bd2cd8f6aa69c657",
+  "active": "8d67e4b439dfcbff",
   "lastOpenFiles": [
+    "unsorted/симуляция формовки.md",
+    "files/Pasted image 20250408225238.png",
+    "archive/базы_данных/SQL/стандарт ANSI.md",
+    "archive/базы_данных/нормализация.md",
+    "archive/базы_данных/postgresql/создание нового сервера Postgres.md",
+    "archive/базы_данных/postgresql/initdb.md",
+    "archive/базы_данных/postgresql/введение в Postgres.md",
+    "archive/базы_данных/mysql/MySQL.md",
+    "archive/базы_данных/mysql/хранимые конструкции.md",
+    "учёба/Экзамен Катунцов.md",
+    "files/Pasted image 20251220151455.png",
     "files/Pasted image 20251220001621.png",
     "archive/сети/протоколы/сетевой уровень/IPv6/IPv6 адресация.md",
     "unsorted/хекстет.md",
-    "учёба/Экзамен Катунцов.md",
     "files/Pasted image 20251219142434.png",
     "files/Pasted image 20251219135554.png",
     "files/Pasted image 20251219134343.png",
@@ -241,25 +236,14 @@
     "unsorted/Кузьмин экзамен системы ИИ.md",
     "учёба/kanban.md",
     "учёба/календарный план выполнения работ.md",
-    "учёба/долги 7 сем.md",
-    "archive/базы_данных/OLTP.md",
-    "archive/базы_данных/OLAP.md",
-    "учёба/тесты жука.md",
     "files/Pasted image 20251208123140.png",
     "files/Pasted image 20251208122037.png",
     "files/Pasted image 20251208113138.png",
     "files/Pasted image 20251208112954.png",
-    "files/Pasted image 20251206212811.png",
-    "учёба/10 и 25.md",
-    "учёба/10 и 15.md",
-    "учёба/10 и 15 Липатников.md",
-    "archive/базы_данных/нормализация.md",
-    "files/Pasted image 20251201113045.png",
     "учёба",
     "files/13.5.1;Липатников П.А.;ИАС-22.pka",
     "archive/языки_программирования/python 3/библиотеки/alembic",
     "archive/базы_данных/PHP",
-    "archive/windows/Taskschd.msc/Запуск задачи в фоне.PNG",
     "projects/ImageWizard",
     "archive/сети/протоколы/сетевой уровень/IPv6",
     "archive/базы_данных/mysql",
