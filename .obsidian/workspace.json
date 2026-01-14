@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unsorted/TOAST.md",
+                "file": "учёба/диплом/Анкудинов про диплом.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TOAST"
+              "title": "Анкудинов про диплом"
             }
           },
           {
@@ -245,12 +245,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "unsorted/TOAST.md",
+                "file": "учёба/диплом/Анкудинов про диплом.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from TOAST"
+              "title": "Outgoing links from Анкудинов про диплом"
             }
           }
         ]
@@ -265,7 +265,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "unsorted/TOAST.md",
+                "file": "учёба/диплом/Анкудинов про диплом.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -275,7 +275,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for TOAST"
+              "title": "Backlinks for Анкудинов про диплом"
             }
           }
         ]
@@ -298,11 +298,15 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "1091e37bdffdef81",
+  "active": "b050302314da1fab",
   "lastOpenFiles": [
-    "учёба/Untitled",
-    "unsorted/сжатие данных.md",
+    "учёба/защита лекций БД.md",
+    "учёба/организация управления производством.md",
+    "учёба/экзамен Катунцов.md",
+    "учёба/диплом/Анкудинов про диплом.md",
     "unsorted/TOAST.md",
+    "учёба/диплом",
+    "unsorted/сжатие данных.md",
     "unsorted/Untitled.md",
     "archive/базы_данных/mysql/MySQL.md",
     "unsorted/мандатный доступ.md",
@@ -320,7 +324,6 @@
     "archive/базы_данных/postgresql/initdb.md",
     "archive/базы_данных/postgresql/введение в Postgres.md",
     "archive/базы_данных/mysql/хранимые конструкции.md",
-    "учёба/Экзамен Катунцов.md",
     "files/Pasted image 20251220151455.png",
     "files/Pasted image 20251220001621.png",
     "unsorted/хекстет.md",
@@ -329,8 +332,6 @@
     "files/Pasted image 20251219134343.png",
     "учёба/экзамен бабушка.md",
     "учёба/оуп шпора.md",
-    "учёба/организация управления производством.md",
-    "учёба/Защита лекций БД.md",
     "archive/языки_программирования/python 3/основы/типы данных python.md",
     "unsorted/Untitled 1.base",
     "unsorted/Untitled.base",
