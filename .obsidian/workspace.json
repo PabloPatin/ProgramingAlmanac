@@ -92,35 +92,35 @@
             }
           },
           {
-            "id": "b050302314da1fab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "учёба/диплом/Анкудинов про диплом.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Анкудинов про диплом"
-            }
-          },
-          {
             "id": "6e89aa3ceec2be37",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unsorted/Untitled.md",
+                "file": "unsorted/TOAST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "TOAST"
+            }
+          },
+          {
+            "id": "8baf6ce4a9d27234",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "homepage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "homepage"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -183,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "archive/сети/протоколы/сетевой уровень/IPv6/IPv6 адресация.md",
+                "file": "homepage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of IPv6 адресация"
+              "title": "Outline of homepage"
             }
           },
           {
@@ -213,7 +213,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#📥",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -238,6 +238,7 @@
       {
         "id": "b00ce7d3ab9ab1e0",
         "type": "tabs",
+        "dimension": 49.26470588235294,
         "children": [
           {
             "id": "42be2baae2bb9066",
@@ -245,12 +246,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "учёба/диплом/Анкудинов про диплом.md",
+                "file": "homepage.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Анкудинов про диплом"
+              "title": "Outgoing links from homepage"
             }
           }
         ]
@@ -258,6 +259,7 @@
       {
         "id": "3d748634fbfc8664",
         "type": "tabs",
+        "dimension": 50.73529411764706,
         "children": [
           {
             "id": "1e986b3373c9495a",
@@ -265,7 +267,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "учёба/диплом/Анкудинов про диплом.md",
+                "file": "homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -275,7 +277,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Анкудинов про диплом"
+              "title": "Backlinks for homepage"
             }
           }
         ]
@@ -298,16 +300,20 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b050302314da1fab",
+  "active": "d149fa87ff0ffae6",
   "lastOpenFiles": [
+    "archive/сети/cisco/Базовая конфигурация коммутатора.md",
+    "homepage.md",
+    "unsorted/функции в postgres.md",
+    "unsorted/TOAST.md",
+    "unsorted/сжатие данных.md",
+    "archive/языки_программирования/python 3/основы/set.md",
+    "unsorted/Untitled.md",
+    "учёба/диплом/Анкудинов про диплом.md",
     "учёба/защита лекций БД.md",
     "учёба/организация управления производством.md",
     "учёба/экзамен Катунцов.md",
-    "учёба/диплом/Анкудинов про диплом.md",
-    "unsorted/TOAST.md",
     "учёба/диплом",
-    "unsorted/сжатие данных.md",
-    "unsorted/Untitled.md",
     "archive/базы_данных/mysql/MySQL.md",
     "unsorted/мандатный доступ.md",
     "unsorted/ролевая модель доступа.md",
@@ -326,13 +332,9 @@
     "archive/базы_данных/mysql/хранимые конструкции.md",
     "files/Pasted image 20251220151455.png",
     "files/Pasted image 20251220001621.png",
-    "unsorted/хекстет.md",
     "files/Pasted image 20251219142434.png",
     "files/Pasted image 20251219135554.png",
     "files/Pasted image 20251219134343.png",
-    "учёба/экзамен бабушка.md",
-    "учёба/оуп шпора.md",
-    "archive/языки_программирования/python 3/основы/типы данных python.md",
     "unsorted/Untitled 1.base",
     "unsorted/Untitled.base",
     "files/Pasted image 20251208123140.png",
