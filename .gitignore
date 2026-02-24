@@ -1,6 +1,7 @@
 /.logs
 /desktop.ini
-copilot
-.obsidian
+/copilot
+/.obsidian
 /.trash
 /.scripts
+/.copilot-index
