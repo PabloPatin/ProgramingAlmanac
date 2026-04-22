@@ -33,4 +33,4 @@ artwork_id, media_id, порядковый номер media, is_primary (для 
 5) Создать запись в media и в таблице соответствующего типа
 6) Cохранить информацию о media в media_source_files и media_source_file_urls
 7) Сохранить оригинал в одно из хранилищ storage и сделать записи в media_storage_objects и media_storage_locations
-8) 
+8) Добавить в artwork_media запись о media (опционально)
