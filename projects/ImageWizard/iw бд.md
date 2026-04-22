@@ -24,3 +24,8 @@ id, тип, хэш
 ## artwork_media
 состав artwork
 artwork_id, media_id, порядковый номер media, is_primary (для превью)
+# Сценарии работы с бд
+## Загрузка работы автора
+1) Создать artwork
+2) Проверить author_identity и создать если не существует
+3) 
