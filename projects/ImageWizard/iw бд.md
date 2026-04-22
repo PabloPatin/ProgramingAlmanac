@@ -28,4 +28,5 @@ artwork_id, media_id, порядковый номер media, is_primary (для 
 ## Загрузка работы автора
 1) Создать artwork
 2) Если на платформе указан автор, то взять из author_identities
-3) 
+3) Создать artwork_source и artwork_source_payload
+4) 
