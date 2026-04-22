@@ -15,4 +15,12 @@ id, каноничное название, описание, дата созда
 Авторы работы (один или несколько)
 ## artwork_sources
 Источник работы на платформе
-artwork_id, id, 
+artwork_id, id на платформе, имя платформы, ...
+## artwork_source_payloads
+Пэйлоад работы с платформы (нужен временно)
+## media
+медиаобъект
+id, тип, хэш
+## artwork_media
+состав artwork
+artwork_id, media_id, порядковый номер media, is_primary (для превью)
