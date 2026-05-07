@@ -11,7 +11,7 @@
 
 ---
 # Задачи
-## 🔥 Сегодня2929⁹⁹⁹⁸⁸⁸
+## 🔥 Сегодня
 ```tasks
 (not done) AND (scheduled before today) OR (due today) OR (scheduled today)
 sort by priority
